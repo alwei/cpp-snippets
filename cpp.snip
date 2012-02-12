@@ -1,0 +1,61 @@
+snippet     template class
+abbr        template <T>
+    template<class ${1:T}>
+
+snippet     template typename
+abbr        template <T>
+    template<typename ${1:T}>
+
+snippet     class
+abbr        class {}
+    class ${1:name} {
+    public:
+        $1();
+        ~$1();
+
+    private:
+        ${0:/* data */}
+    };
+
+snippet     class no access specifiers
+abbr        class {}
+    class ${1:name} {
+        ${0:/* data */}
+    };
+
+snippet     try
+abbr        try catch
+    try {
+        ${1}
+    }
+    catch (${2:exception}) {
+        ${3}
+    }
+
+snippet     namespace
+abbr        namespace {}
+    namespace ${1:name} {
+    } /* end of namespace $1 */
+
+# range based for ( C++11 feature )
+snippet     for_CPP11
+abbr        for (:) {}
+    for (${1:var} : ${2:container}) {
+        ${0}
+    }
+
+# lambda expression ( C++11 feature )
+snippet     lambda
+abbr        [](){}
+    [${1}](${2})${3}{ ${4} }
+
+# scoped enumeration ( C++11 feature )
+snippet     enum_scoped1
+abbr        enum struct {}
+    enum struct { ${1} }
+
+# scoped enumeration ( C++11 feature )
+snippet     enum_scoped2
+abbr        enum struct {}
+    enum struct : ${1} { ${2} }
+
