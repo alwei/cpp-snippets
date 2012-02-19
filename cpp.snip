@@ -32,6 +32,18 @@ abbr        try catch
         ${3}
     }
 
+snippet     cout1
+abbr        std::cout
+    std::cout << ${1} << std::endl;
+
+snippet     cout2
+abbr        std::cout
+    std::cout << ${1} << ${2} << std::endl;
+
+snippet     cout3
+abbr        std::cout
+    std::cout << ${1} << ${2} << ${3} std::endl;
+
 snippet     namespace
 abbr        namespace {}
     namespace ${1:name} {
