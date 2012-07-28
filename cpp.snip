@@ -1,14 +1,11 @@
-snippet     template class
-abbr        template <T>
-    template<class ${1:T}>
-
-snippet     template typename
+snippet     template
 abbr        template <T>
     template<typename ${1:T}>
 
 snippet     class
 abbr        class {}
-    class ${1:name} {
+    class ${1:name}
+    {
     public:
         $1();
         ~$1();
@@ -19,7 +16,8 @@ abbr        class {}
 
 snippet     class no access specifiers
 abbr        class {}
-    class ${1:name} {
+    class ${1:name}
+    {
         ${0:/* data */}
     };
 
@@ -32,21 +30,10 @@ abbr        try catch
         ${3}
     }
 
-snippet     cout1
-abbr        std::cout
-    std::cout << ${1} << std::endl;
-
-snippet     cout2
-abbr        std::cout
-    std::cout << ${1} << ${2} << std::endl;
-
-snippet     cout3
-abbr        std::cout
-    std::cout << ${1} << ${2} << ${3} std::endl;
-
 snippet     namespace
 abbr        namespace {}
-    namespace ${1:name} {
+    namespace ${1:name}
+    {
     } /* end of namespace $1 */
 
 # range based for ( C++11 feature )

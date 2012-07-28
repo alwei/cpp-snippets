@@ -52,25 +52,29 @@ abbr        switch () {}
 snippet     function
 alias       func
 abbr        func() {}
-    ${1:void} ${2:func_name}(${3}) {
+    ${1:void} ${2:func_name}(${3})
+    {
         ${0}
     }
 
 snippet     struct
 abbr        struct {}
-    struct ${1:name} {
+    struct ${1:name}
+    {
         ${0:/* data */}
     };
 
 # Typedef struct
 snippet struct_typedef
-    typedef struct ${1:name}{
+    typedef struct ${1:name}
+    {
         ${0:/* data */}
     };
 
 snippet     enum
 abbr        enum {}
-    enum ${1:name} {
+    enum ${1:name}
+    {
         ${0}
     };
 
